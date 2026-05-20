@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash('d:/06_Polimi/2025-2026/Land Cover/Validation/sample-design/.venv/Scripts/python.exe' -c ' *)",
-      "Bash(\"d:/06_Polimi/2025-2026/Land Cover/Validation/sample-design/.venv/Scripts/python.exe\" -)"
-    ]
-  }
-}
