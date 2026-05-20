@@ -1,5 +1,0 @@
-3 tids are ignored due to missing or multiple files.
-Ignored tids:
-23MLU
-20NQJ
-22NEG

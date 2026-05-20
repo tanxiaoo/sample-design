@@ -1,8 +1,0 @@
-Metric,Value
-Overall_Accuracy,0.4664656187852894
-Kappa,0.3405722913388525
-Balanced_Accuracy,0.573769632848444
-MCC,0.4684192546151322
-mIoU,0.3579499843265718
-Pontius_Quantity_Disagreement,0.5071721842223208
-Pontius_Allocation_Disagreement,0.02636219699238984
