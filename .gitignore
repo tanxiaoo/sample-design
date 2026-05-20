@@ -19,6 +19,9 @@ Tiffs/
 # Virtual environment
 .venv/
 
+# Claude workspace settings
+/.claude/
+
 # Python cache
 __pycache__/
 *.pyc
