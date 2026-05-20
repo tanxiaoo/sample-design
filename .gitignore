@@ -13,9 +13,8 @@ Tiffs/
 /MOLCA/
 /Sentine-2_UTM_Tiling_Grid_By_Region/
 
-# Data folders (ignore contents, but keep the .gitkeep placeholder)
-/Samples_2024/*
-!/Samples_2024/.gitkeep
+# Data folders
+/Samples_2024/
 
 # Virtual environment
 .venv/
