@@ -9,6 +9,10 @@
 Backup_*/
 Tiffs/
 
+# Do not push region data directories
+/MOLCA/
+/Sentine-2_UTM_Tiling_Grid_By_Region/
+
 # Data folders (ignore contents, but keep the .gitkeep placeholder)
 /Samples_2024/*
 !/Samples_2024/.gitkeep
