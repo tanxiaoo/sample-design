@@ -1,0 +1,12 @@
+Class code,Label,Color
+5,Shrubland,#8b4513
+7,Grassland,#32cd32
+8,Cropland,#ffd700
+13,Built-up,#808080
+12,Bareland,#c2b280
+16,Permanent ice and snow,#b0c4de
+15,Water,#1e90ff
+9,Wetland,#4682b4
+11,Lichens and mosses,#a9cda9
+20,Forest,#006400
+255,No data,#ffffff

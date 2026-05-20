@@ -1,0 +1,29 @@
+# Consolidated top-level .gitignore for the sample-design project
+# Feel free to adjust patterns below; folder-specific exceptions are listed explicitly.
+
+# Raster tiles, large geospatial binaries and backups
+*.tif
+*.tiff
+*.vrt
+*.gpkg
+Backup_*/
+Tiffs/
+
+# Data folders (ignore contents, but keep the .gitkeep placeholder)
+/Samples_2024/*
+!/Samples_2024/.gitkeep
+
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor / OS
+.vscode/
+Thumbs.db
+Desktop.ini

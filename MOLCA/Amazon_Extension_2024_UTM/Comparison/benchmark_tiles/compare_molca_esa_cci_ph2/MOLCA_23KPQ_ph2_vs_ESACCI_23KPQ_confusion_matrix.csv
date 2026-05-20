@@ -1,0 +1,9 @@
+,Shrubland,Grassland,Cropland,Wetland,Bareland,Built-up,Water,Forest
+Shrubland,0,0,0,0,0,0,0,0
+Grassland,0,59226,33,21,407,244,34,369
+Cropland,0,350,0,1,20,21,0,2
+Wetland,0,568,0,517,2,8,14,14
+Bareland,0,0,0,0,58,9,1,0
+Built-up,1,3631,0,62,4079,991614,135,398
+Water,0,458,0,5211,6466,867,8457455,109
+Forest,52,146905,29,1869,1788,4287,1335,1435437

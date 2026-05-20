@@ -1,0 +1,70 @@
+base:
+  region: AFRICA
+  year: 2024
+  dst_crs_epsg: 4326
+  num_workers: 48
+  parallel_method: "tiles_utm"
+  ignore_eds: []
+  log_level: 'info'
+  binary_ds: ['FNF', 'FNF4', 'GFC', 'GHS_BU_LDS', 'GHS_BU_R2023A', 'GHS_BU_S1', 'GISD30', 'GSW','GUF',  'GWL_FCS30D', 'TreeCanopyCover', 'WSF']
+  reclassified_rules_dir: "/g100/home/userexternal/qxu00001/scripts/MOLCX/molcx/harmonized_rec_rules"
+input:
+  base_dir: ""
+  existing_products_dir: "/g100_work/pMI25_DICA/qxu00001/ESA_CCI_HRLC_Phase2/Existing_products/Africa/2024"
+  molcx_legend_path: ""
+  tif_name_type: 'cci_tif_30m'
+output:
+  base_dir: "/g100_work/pMI25_DICA/qxu00001/ESA_CCI_HRLC_Phase2/Historic_products_processing/MOLCA/Africa_2024_UTM"
+  matcher_csv_name: "molcx_africa_2024_s2_exist.csv"
+  matcher_gpkg_name: "molcx_africa_2024_s2_exist.gpkg"
+  stat_dir_name: "Stats"
+matcher:
+  s2_grid_path: "/g100/home/userexternal/qxu00001/Phase2/CCI_regions/Sentine-2_UTM_Tiling_Grid_By_Region/S2_Grid_Africa_Historic.gpkg"
+  geo_column_name: "geometry"
+  ref_column_name: "Existing_data_location"
+  clsfied_column_name: "Tile_ID"
+  tile_resolution: 30
+  mode: "s2_grid_reference_matcher"
+  skip: false
+molca:
+  use_match_gpkg: true
+  handle_number_of_tiles:  #['35PRS', '36NXP', '36NYP']
+  export_molca_dir_name: "Tiffs"
+  skip: false
+reference_ds:
+  - name: CCI_HRLC
+preprocessing_steps:
+  GLC_FCS30D:
+    - name: "import_GLC_FCS30D_grass"
+    - name: "tile_to_region"
+    - name: "set_null"
+      params: {setnull: [0,250]}
+    - name: "reclassify"
+  TreeCanopyCover:
+    - name: "import_grass"
+    - name: "tile_to_region"
+    - name: "threshold"
+      params: { min_val: 50,  max_val: 100, inside_val: 1}
+    - name: "reclassify"
+  GHS_BU_R2023A:
+    - name: "import_grass"
+    - name: "tile_to_region"
+    - name: "set_null"
+      params: {setnull: [255]}
+    - name: "threshold"
+      params: { min_val: 50,  max_val: 100, inside_val: 1}
+    - name: "reclassify"
+  GHS_BU_S1:
+    - name: "import_grass"
+    - name: "tile_to_region"
+    - name: "set_null"
+      params: {null_val: 0}
+    - name: "reclassify"
+  CCI_HRLC:
+    - name: "reclassify"
+  default:
+    - name: "import_grass"
+    - name: "tile_to_region"
+    - name: "set_null"
+      params: {setnull: [-999]}
+    - name: "reclassify"

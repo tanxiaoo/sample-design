@@ -1,0 +1,8 @@
+Class Code,Class Label,MOLCA_21MWV_ph2 Count,ESACCI_21MWV Count,Difference,Diff_Percent. (diff/ESACCI_21MWV_Count)
+5,Shrubland,0,833,-833,-100.0
+7,Grassland,3,9925,-9922,-99.97
+9,Wetland,234,2869,-2635,-91.84
+12,Bareland,0,56,-56,-100.0
+15,Water,119921,175794,-55873,-31.78
+20,Forest,12543363,13067404,-524041,-4.01
+255,No Data (255.0),732079,138719,593360,427.74

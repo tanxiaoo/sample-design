@@ -1,0 +1,7 @@
+,Shrubland,Grassland,Wetland,Bareland,Water,Forest
+Shrubland,0,0,0,0,0,0
+Grassland,0,1,0,1,0,1
+Wetland,0,74,53,0,103,4
+Bareland,0,0,0,0,0,0
+Water,0,42,138,0,118592,434
+Forest,24,1950,183,3,1645,12402512
